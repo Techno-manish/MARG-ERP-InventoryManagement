@@ -1,0 +1,328 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #f0f0e8;
+  border: 2px solid #000;
+  width: 1250px;
+  max-height: 95vh;
+  overflow-y: auto;
+  font-family: "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  color: #000;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+.modal-header {
+  background: #7a9b7a;
+  color: #fff;
+  padding: 3px 6px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000;
+}
+
+.modal-header h2 {
+  font-size: 12px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Form Styling */
+.product-form {
+  padding: 6px;
+}
+
+/* Main grid layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+/* Left column */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Right column */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Shared row layout - switch to grid */
+.form-row,
+.top-row,
+.product-row,
+.units-row,
+.types-row,
+.tax-row,
+.bottom-row {
+  display: grid;
+  grid-template-columns: 120px 150px 120px 150px 120px 150px; /* label + field ×3 */
+  align-items: center;
+  gap: 6px 12px;
+  margin-bottom: 4px;
+  padding: 2px;
+}
+
+/* Form groups - let children flow into grid cells */
+.form-group {
+  display: contents;
+}
+
+.form-group label {
+  justify-self: end;
+  white-space: nowrap;
+  font-size: 11px;
+  color: #000;
+}
+
+.form-group input,
+.form-group select {
+  justify-self: start;
+  border: 1px inset #d4d0c8;
+  padding: 1px 3px;
+  font-family: "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  background: #fff;
+  height: 18px;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 50px;
+}
+
+.form-group select {
+  background: #d4d0c8;
+}
+
+.input {
+  min-width: 80px;
+}
+
+/* Specific field widths */
+.status-field {
+  width: 90px;
+}
+.type-field {
+  width: 80px;
+}
+.hide-field {
+  width: 60px;
+}
+.code-field {
+  width: 50px;
+}
+.product-field {
+  width: 400px;
+  background: #e8f4e8;
+  font-weight: bold;
+}
+.packing-field {
+  width: 80px;
+}
+.decimal-field {
+  width: 45px;
+}
+.unit-field {
+  width: 60px;
+}
+.color-field {
+  width: 80px;
+}
+.item-field {
+  width: 80px;
+}
+.fast-search-field {
+  width: 200px;
+}
+
+/* Company/Salt/HSN rows */
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 3px;
+  padding: 20px;
+  width: 50px;
+}
+
+.toggle-field {
+  width: 100px;
+}
+.company-field {
+  width: 100px;
+}
+.salt-field {
+  width: 100px;
+  color: red;
+}
+.hsn-field {
+  width: 100px;
+}
+
+/* Tax section */
+.tax-section {
+  border: 1px solid #808080;
+  background: #f8f8f8;
+  padding: 6px;
+  margin: 6px 0;
+}
+
+.tax-field {
+  width: 70px;
+}
+.percent-field {
+  width: 50px;
+}
+
+/* Pricing section - two columns */
+.pricing-section {
+  background: #f0f0e8;
+  padding: 6px;
+  margin: 6px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.pricing-left,
+.pricing-right {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.price-field {
+  width: 65px;
+}
+.qty-field {
+  width: 45px;
+}
+
+/* Bottom section */
+.bottom-section {
+  border: 1px solid #808080;
+  background: #f8f8f8;
+  padding: 6px;
+  margin: 6px 0;
+}
+
+.discount-field {
+  width: 60px;
+}
+.scheme-field {
+  width: 45px;
+}
+.margin-field {
+  width: 60px;
+}
+.schedule-field {
+  width: 45px;
+}
+.batch-field {
+  width: 45px;
+}
+
+/* Special styling for CESS fields */
+.cess-container {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.cess-plus {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Special styling for FREE SCHEME */
+.scheme-container {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.scheme-dash {
+  color: #000;
+}
+
+/* Buttons */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid #808080;
+}
+
+.save-button,
+.cancel-button {
+  padding: 3px 12px;
+  border: 2px outset #d4d0c8;
+  background: #d4d0c8;
+  cursor: pointer;
+  font-size: 11px;
+  font-family: "MS Sans Serif", sans-serif;
+}
+
+.save-button:hover,
+.cancel-button:hover {
+  background: #e0dcd5;
+}
+
+.save-button:active,
+.cancel-button:active {
+  border: 2px inset #d4d0c8;
+}
+
+.small-input {
+  max-width: 30px;
+}
+
+.no-gap {
+  display: flex;
+}
+
+.large-input {
+  min-width: 250px !important;
+}
+
+.mid-input {
+  min-width: 150px !important;
+}
+
+.divider {
+  font-weight: bold;
+  color: #000;
+  right: 50px;
+}

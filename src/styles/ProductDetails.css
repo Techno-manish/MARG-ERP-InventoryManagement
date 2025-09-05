@@ -1,0 +1,102 @@
+/* Product Details Section */
+.product-details-section {
+  background-color: #f9f6e8; /* light beige like screenshot */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 16px;
+  padding: 16px;
+  font-family: monospace;
+  font-size: 14px;
+  min-height: 190px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.product-details-section:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Details Container */
+.details-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns like screenshot */
+  gap: 16px;
+}
+
+/* Details Column */
+.details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Detail Row */
+.detail-row {
+  display: flex;
+  align-items: center;
+  min-height: 20px;
+}
+
+.detail-row-flex {
+  display: flex;
+  gap: 16px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Labels and Values */
+.detail-label {
+  color: #333;
+  font-weight: 600;
+  min-width: 100px;
+}
+
+.detail-value {
+  color: #000;
+  margin-left: 8px;
+}
+
+/* Browser Icon (if used) */
+.browser-icon {
+  margin-left: auto;
+  font-size: 16px;
+  color: #888;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+  .product-details-section {
+    margin: 8px;
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .details-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .detail-row-flex {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .detail-label {
+    min-width: auto;
+    font-size: 12px;
+  }
+
+  .detail-value {
+    font-size: 12px;
+  }
+
+  .browser-icon {
+    font-size: 14px;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+}

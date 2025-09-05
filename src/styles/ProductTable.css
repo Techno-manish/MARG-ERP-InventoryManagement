@@ -1,0 +1,187 @@
+.product-table-container {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  overflow: hidden; /* keep scroll inside body */
+}
+
+.product-table-container:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.product-table-body {
+  max-height: 320px; /* ~10 rows */
+  overflow-y: auto;
+  display: block;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: monospace;
+  font-size: 14px;
+  table-layout: fixed; /* keep header and body aligned */
+}
+
+.product-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #007b8f;
+  color: #fff;
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  font-size: 14px;
+
+  border: none;
+  box-shadow: inset 0 -1px 0 #ccc;
+}
+
+/* Table Body Rows */
+.product-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.product-table tbody tr.even {
+  background-color: #fff;
+}
+
+.product-table tbody tr.odd {
+  background-color: #f2f6f7;
+}
+
+.product-table tbody tr.selected {
+  background-color: #007b8f;
+  color: #fff;
+  border-color: #e0eff1;
+}
+
+/* 🔥 Fix: remove borders on selected row */
+.product-table tbody tr.selected td {
+  border-color: #e0eff1;
+}
+
+.product-table tbody tr:hover:not(.selected) {
+  background-color: #e0eff1;
+}
+
+.product-table td {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  white-space: nowrap;
+  color: #333;
+}
+
+/* Column Widths */
+.product-table th:nth-child(1),
+.product-table td:nth-child(1) {
+  width: 40%;
+}
+
+.product-table th:nth-child(2),
+.product-table td:nth-child(2) {
+  width: 20%;
+}
+
+.product-table th:nth-child(3),
+.product-table td:nth-child(3) {
+  width: 25%;
+}
+
+.product-table th:nth-child(4),
+.product-table td:nth-child(4) {
+  width: 15%;
+  text-align: left;
+}
+
+/* Search Section */
+.search-section {
+  padding: 12px;
+  background-color: #f2f6f7;
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.search-label {
+  color: #007b8f;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: monospace;
+  font-size: 14px;
+  color: #333;
+  width: 200px;
+  padding: 0 4px;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .product-table-container {
+    margin: 8px;
+    border-radius: 4px;
+  }
+
+  .product-table {
+    font-size: 12px;
+  }
+
+  .product-table th,
+  .product-table td {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .product-table th:nth-child(1),
+  .product-table td:nth-child(1) {
+    width: 35%;
+  }
+
+  .product-table th:nth-child(2),
+  .product-table td:nth-child(2) {
+    width: 25%;
+  }
+
+  .product-table th:nth-child(3),
+  .product-table td:nth-child(3) {
+    width: 25%;
+  }
+
+  .product-table th:nth-child(4),
+  .product-table td:nth-child(4) {
+    width: 15%;
+  }
+
+  .search-section {
+    padding: 8px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .search-input {
+    width: 150px;
+    font-size: 12px;
+  }
+
+  .search-label {
+    font-size: 12px;
+  }
+}

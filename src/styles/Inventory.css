@@ -1,0 +1,74 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+.marg-erp-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #13343b;
+}
+
+.main-header {
+  background-color: #21808d;
+  color: #ffffff;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1a6f7b;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.main-header h1 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+}
+
+.timestamp {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: #fff;
+  overflow: auto;
+}
+
+@media (max-width: 480px) {
+  .main-header {
+    padding: 6px 12px;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .main-header h1 {
+    font-size: 14px;
+  }
+
+  .timestamp {
+    font-size: 12px;
+  }
+
+  .main-content {
+    padding: 12px;
+  }
+
+  .marg-erp-container {
+    font-size: 12px;
+  }
+}
