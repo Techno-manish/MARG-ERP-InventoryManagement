@@ -3,6 +3,7 @@ import ProductDetails from "../components/ProductDetails";
 import ProductModal from "../components/ProductModal";
 import KeyboardModal from "../components/KeyboardModal";
 import "../styles/Inventory.css";
+import Timer from "../components/Timer";
 
 const Inventory = () => {
   return (
@@ -13,7 +14,7 @@ const Inventory = () => {
           <h1>ITEMS</h1>
         </div>
         <div className="header-right">
-          <span className="timestamp">17:58:57</span>
+          <Timer />
         </div>
       </header>
 
